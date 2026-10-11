@@ -57,6 +57,8 @@ h1 { font-size: clamp(34px, 5vw, 46px); line-height: 1.18; letter-spacing: -1.7p
 .bio { font-size: 17px; line-height: 1.8; color: var(--muted); margin: 0; max-width: 540px; }
 .currently { display: flex; align-items: baseline; gap: 9px; margin: 21px 0 0; font-size: 13px; line-height: 1.7; color: var(--muted); }
 .upcoming { margin-top: 6px; }
+.company-link { color: var(--accent); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
+.company-link:hover { text-decoration-color: var(--accent); }
 .status-dot { width: 5px; height: 5px; flex: 0 0 5px; border-radius: 50%; background: var(--accent); transform: translateY(-2px); }
 .section-heading { display: flex; align-items: baseline; gap: 10px; border-bottom: 1px solid var(--line); padding-bottom: 12px; margin-bottom: 20px; }
 .section-number { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; color: var(--faint); }
