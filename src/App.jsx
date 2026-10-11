@@ -66,7 +66,7 @@ export default function App() {
         {profile.incoming && <p className="currently upcoming"><span className="status-dot" aria-hidden="true" />{profile.incoming}</p>}
       </section>
       <section className="work-section" aria-labelledby="work-heading">
-        <SectionHeading number="01" id="work-heading">Work & a little more</SectionHeading>
+        <SectionHeading number="01" id="work-heading">Look at my resume</SectionHeading>
         <div className="work-grid">
           {/* <LinkCard href={profile.portfolioUrl} title={profile.portfolioTitle || 'Portfolio'} description={profile.portfolioDescription || 'Selected work, projects & experiments.'} type="portfolio" /> */}
           <LinkCard href={profile.resumeUrl} title="Resume" description="A little more about my background." type="resume" />
