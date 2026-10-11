@@ -21,8 +21,7 @@ export const workExperience = [
     skills: ['PLC', 'Ladder Logic', 'SCADA', 'HMI', 'I/O Testing', 'Shell Scripting'],
     highlights: [
       'Designing and testing PLC/SCADA control systems using ladder logic programming, HMI screens, and I/O testing to support industrial automation and plant equipment upgrades',
-      'Writing shell scripts to poll data from DA50 protocol converter and automate PLC file searching & classification',
-      'Working with NG and NGL services',
+      'Writing shell scripts to poll data from DA50 protocol converter and automate PLC file searching & classification'
     ],
   },
   {
