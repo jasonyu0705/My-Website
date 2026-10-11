@@ -83,6 +83,6 @@ export default function App() {
         </div></div>
       </section>
     </main>
-    <footer className="site-footer"><span>{profile.name}</span><span>A work in progress <span className="footer-spark" aria-hidden="true">✳</span></span></footer>
+    <footer className="site-footer"><span>{profile.name}</span></footer>
   </>;
 }

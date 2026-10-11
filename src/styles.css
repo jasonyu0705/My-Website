@@ -107,7 +107,6 @@ a:hover .arrow { transform: translate(2px, -2px); color: var(--accent); }
 .email-link:hover { text-decoration-color: var(--accent); }
 .secondary-email { flex-basis: 100%; }
 .site-footer { max-width: 824px; margin: 65px auto 0; padding: 0 32px 27px; display: flex; justify-content: space-between; gap: 16px; font-size: 10px; color: var(--faint); }
-.footer-spark { display: inline-block; font-size: 14px; color: var(--accent); margin-left: 7px; vertical-align: middle; }
 .skip-link { position: fixed; left: 16px; top: -80px; padding: 8px 14px; background: var(--card); border: 1px solid var(--line); border-radius: 4px; z-index: 10; }
 .skip-link:focus { top: 16px; }
 
