@@ -80,6 +80,17 @@ export const workExperience = [
     ],
   },
   {
+    id: 'cal-poly-lleap-controls-lead',
+    role: 'Controls Integration Technical Lead',
+    company: 'Cal Poly LLEAP',
+    location: 'San Luis Obispo, CA',
+    dates: 'Aug. 2025 – Jun. 2026',
+    skills: [],
+    highlights: [
+      'Working closely with Software and Mechatronics teams',
+    ],
+  },
+  {
     id: 'hunter-software',
     role: 'Software Engineer Intern',
     company: 'Hunter Industries',
@@ -203,9 +214,9 @@ export const projects = [
     dates: 'Dec. 2024',
     skills: ['Verilog', 'FPGA Programming', 'VGA', 'Assembly'],
     highlights: [
-      'Constructed an OTTER processor in SystemVerilog containing an ALU, FSM, and other modules',
-      'Added a VGA module to the processor and wrote RISC-V assembly to create a rendition of Snake, with buttons on a Basys 3 board as I/O controls',
-      'Programmed a main loop and multiple subroutines for clean gameplay, using the stack to manage subroutine registers and an ISR to handle button inputs',
+      'Constructed a OTTER 32-bit RISC-V CPU Core in System Verilog containing an ALU, FSM, and other modules and flashed to an Artix-7 Basys 3 FPGA.',
+      'Utilized the previously constructed processor with an added VGA module and RISC-V assembly code as the base to create a rendition of snake, with I/O control inputs as buttons on a BASYS 3 board.',
+      'Programmed a main loop and multiple subroutines to create clean game-play and connected assembly code with the processor, using stacks to manage subroutine registers and an ISR to manage proper button inputs.',
     ],
   },
 ];
