@@ -1,7 +1,7 @@
 // Public profile details. Rebuild after making changes.
 export const profile = {
   name: 'Jason Yu',
-  bio: 'I’m a Computer Engineering student at Cal Poly San Luis Obispo, working across embedded systems, firmware, and software.',
+  bio: 'I’m a Computer Engineering senior at Cal Poly San Luis Obispo, working across embedded systems, firmware, software and hardware.',
   current: 'Currently a Process Controls & Automation Engineering Intern at Marathon Petroleum Corporation',
   currentCompany: 'Marathon Petroleum Corporation',
   currentCompanyUrl: 'https://www.marathonpetroleum.com/',
