@@ -1,14 +1,17 @@
-// Replace these sample details with yours, then rebuild to publish your changes.
+// Public details from Jason's resume. Rebuild after making changes.
 export const profile = {
-  name: 'Your Name',
-  bio: 'A short introduction about you, what you do, and what you care about.',
-  current: 'A little about what you’re working on right now.',
-  currentLabel: 'My portfolio',
-  portfolioUrl: 'https://example.com/portfolio',
-  resumeUrl: 'https://example.com/resume.pdf',
-  githubLabel: 'your-username',
-  githubUrl: 'https://github.com/your-username',
-  linkedinUrl: 'https://www.linkedin.com/in/your-username/',
-  email: 'hello@example.com',
+  name: 'Jason Yu',
+  bio: 'I’m a Computer Engineering student at Cal Poly San Luis Obispo, working across embedded systems, firmware, and software.',
+  current: 'Currently a Process Control & Automation Engineer Intern at Marathon Petroleum.',
+  // No separate portfolio URL was listed in the resume; use GitHub until one is added.
+  portfolioUrl: 'https://github.com/jasonyu0705',
+  portfolioTitle: 'Projects',
+  portfolioDescription: 'Embedded systems, firmware & software.',
+  resumeUrl: '/resume.pdf',
+  githubLabel: 'jasonyu0705',
+  githubUrl: 'https://github.com/jasonyu0705',
+  linkedinUrl: 'https://www.linkedin.com/in/JasonYu101',
+  email: 'jjjyyy101@outlook.com',
+  phone: '925-768-0036',
   secondaryEmail: '',
 };

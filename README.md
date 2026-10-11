@@ -15,9 +15,9 @@ Open http://localhost:3000. React and CSS changes rebuild automatically; refresh
 
 ## Make it yours
 
-Edit `src/profile.js` to replace the sample name, bio, current activity, GitHub, LinkedIn, email, resume URL, and portfolio URL. All displayed personal details and links are sample placeholders.
+Edit `src/profile.js` to update Jason's name, bio, current activity, GitHub, LinkedIn, email, phone, resume URL, and portfolio URL. The current details come from his resume. The Projects card links to his GitHub because the resume did not list a separate portfolio URL; change `portfolioUrl`, `portfolioTitle`, and `portfolioDescription` when a portfolio is available.
 
-You can place your own resume in `public/resume.pdf` and set `resumeUrl` to `/resume.pdf`. Use your portfolio's URL for `portfolioUrl`. Add a second email with `secondaryEmail`, or leave it empty.
+The original resume is included as `public/resume.pdf` and opens from the Resume card. Replace that file to update it. Add a second email with `secondaryEmail`, or leave it empty. Clear `phone` to hide the phone link.
 
 Style the page in `src/styles.css`. The gallery and social links stack on mobile. The card illustrations are made with CSS and need no image files. The initials mark comes from your name. Theme choice is saved in the visitor's browser and defaults to their system preference.
 

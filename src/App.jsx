@@ -64,7 +64,7 @@ export default function App() {
       <section className="work-section" aria-labelledby="work-heading">
         <SectionHeading number="01" id="work-heading">Work & a little more</SectionHeading>
         <div className="work-grid">
-          <LinkCard href={profile.portfolioUrl} title="Portfolio" description="Selected work, projects & experiments." type="portfolio" />
+          <LinkCard href={profile.portfolioUrl} title={profile.portfolioTitle || 'Portfolio'} description={profile.portfolioDescription || 'Selected work, projects & experiments.'} type="portfolio" />
           <LinkCard href={profile.resumeUrl} title="Resume" description="A little more about my background." type="resume" />
         </div>
       </section>
@@ -77,9 +77,10 @@ export default function App() {
       </section>
       <section className="contact-section" aria-labelledby="contact-heading">
         <SectionHeading number="03" id="contact-heading">Say hello</SectionHeading>
-        <div className="contact-content"><p>Have something in mind? I’d love to hear it.</p><a className="email-link" href={`mailto:${profile.email}`}>{profile.email}<Arrow /></a>
+        <div className="contact-content"><p>Have something in mind? I’d love to hear it.</p><div className="contact-links"><a className="email-link" href={`mailto:${profile.email}`}>{profile.email}<Arrow /></a>
+          {profile.phone && <a className="phone-link" href={`tel:${profile.phone.replace(/[^\d+]/g, '')}`}>{profile.phone}</a>}
           {profile.secondaryEmail && <a className="email-link secondary-email" href={`mailto:${profile.secondaryEmail}`}>{profile.secondaryEmail}<Arrow /></a>}
-        </div>
+        </div></div>
       </section>
     </main>
     <footer className="site-footer"><span>{profile.name}</span><span>A work in progress <span className="footer-spark" aria-hidden="true">✳</span></span></footer>

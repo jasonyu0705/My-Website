@@ -100,6 +100,9 @@ a:hover .arrow { transform: translate(2px, -2px); color: var(--accent); }
 .social-detail { display: block; color: var(--muted); font-size: 11px; margin-top: 4px; overflow-wrap: anywhere; }
 .contact-content { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 20px; align-items: baseline; }
 .contact-content p { font-size: 13px; line-height: 1.7; color: var(--muted); margin: 0; }
+.contact-links { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; min-width: 0; }
+.phone-link { font-size: 12px; color: var(--muted); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
+.phone-link:hover { color: var(--accent); text-decoration-color: var(--accent); }
 .email-link { font-size: 13px; color: var(--accent); display: inline-flex; align-items: baseline; gap: 9px; overflow-wrap: anywhere; min-width: 0; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 5px; }
 .email-link:hover { text-decoration-color: var(--accent); }
 .secondary-email { flex-basis: 100%; }
