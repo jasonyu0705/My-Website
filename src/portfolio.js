@@ -53,6 +53,20 @@ export const workExperience = [
     ],
   },
   {
+    id: 'hack4impact-technical-lead',
+    role: 'Technical Lead',
+    company: 'Cal Poly Hack4Impact',
+    projectUrl: 'https://operation-surf.vercel.app/',
+    projectLabel: 'View Operation Surf',
+    location: 'San Luis Obispo, CA',
+    dates: 'Sept. 2025 – Jun. 2026',
+    skills: ['Agile', 'Sprint Planning', 'Team Leadership', 'Next.js'],
+    highlights: [
+      'Managed Agile development processes for a team of 12, leading biweekly sprint meetings to plan, delegate, and review developer tickets and ensure timely delivery of functionality to clients.',
+      'Developed a full-stack Next.js application for a nonprofit, creating an interactive volunteer management system where volunteers can sign up for events and admins can track volunteers.',
+    ],
+  },
+  {
     id: 'marathon-software',
     role: 'Software Engineer Intern',
     company: 'Marathon Petroleum Corporation',
@@ -79,6 +93,20 @@ export const workExperience = [
       'Constructed a user-friendly card UI using AngularJS, allowing the user to select what controller data they want to export and in what format (PDF or CSV).',
       'Utilized AWS Lambda and Amazon RDS for serverless data querying, allowing for efficient data access.',
       'Applied Agile methodologies and Test-Driven Development in a team of four to ensure robust code',
+    ],
+  },
+  {
+    id: 'hack4impact-software-developer',
+    role: 'Software Developer',
+    company: 'Cal Poly Hack4Impact',
+    location: 'San Luis Obispo, CA',
+    dates: 'Sept. 2024 – Jun. 2025',
+    skills: ['React', 'HTML', 'CSS', 'Howler.js', 'MongoDB', 'RESTful APIs'],
+    highlights: [
+      'Used React to develop an audio tour website where users scan a QR code to track progress and play location-based audio.',
+      'Implemented dynamic UI components for an engaging “Point of Interest” page, enhancing user experience and progress tracking using HTML and CSS.',
+      'Used Howler.js to enable seamless audio playback at each point of interest.',
+      'Built a scalable backend with MongoDB and a RESTful API to manage point-of-interest data and audio content efficiently.',
     ],
   },
   {

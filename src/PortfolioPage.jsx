@@ -48,6 +48,7 @@ export default function PortfolioPage({ themeToggle }) {
               <p className="entry-company">{job.companyUrl ? <a className="company-link" href={job.companyUrl} target="_blank" rel="noopener noreferrer">{job.company}</a> : job.company}</p>
               <Skills items={job.skills} />
               <Highlights items={job.highlights} />
+              {job.projectUrl && <p className="experience-project"><a className="company-link" href={job.projectUrl} target="_blank" rel="noopener noreferrer">{job.projectLabel || 'View project'} <span aria-hidden="true">↗</span></a></p>}
             </div>
           </article>)}
         </div>

@@ -130,6 +130,7 @@ a:hover .arrow { transform: translate(2px, -2px); color: var(--accent); }
 .current-badge { display: inline-flex; align-items: baseline; gap: 7px; font-size: 10px; color: var(--accent); margin-top: 12px; }
 .experience-detail h3, .project-entry h3 { font-size: 17px; font-weight: 550; line-height: 1.5; letter-spacing: -.3px; margin: 0 0 6px; overflow-wrap: anywhere; }
 .entry-company { font-size: 12px; line-height: 1.7; color: var(--muted); margin: 0; }
+.experience-project { font-size: 12px; line-height: 1.7; margin: 16px 0 0; }
 .skill-list { list-style: none; padding: 0; margin: 14px 0 16px; display: flex; flex-wrap: wrap; gap: 6px; }
 .skill-list li { color: var(--muted); background: var(--wash); border: 1px solid var(--line); border-radius: 4px; font-size: 10px; line-height: 1.5; padding: 3px 7px; }
 .highlights { padding-left: 16px; margin: 14px 0 0; color: var(--muted); font-size: 12px; line-height: 1.9; }
