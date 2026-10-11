@@ -89,6 +89,7 @@ export const workExperience = [
     dates: 'Sept. 2024 – Apr. 2025',
     skills: ['Java', 'Python', 'Teaching'],
     highlights: [
+      'ISA for CSC203, CSC101',
       'Supported 25 students in mastering OOP fundamentals and advanced concepts through weekly office hours, while grading labs and problem sets with consistent feedback to improve code quality and student performance.',
     ],
   },
