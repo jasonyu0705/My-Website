@@ -131,6 +131,7 @@ a:hover .arrow { transform: translate(2px, -2px); color: var(--accent); }
 .experience-detail h3, .project-entry h3 { font-size: 17px; font-weight: 550; line-height: 1.5; letter-spacing: -.3px; margin: 0 0 6px; overflow-wrap: anywhere; }
 .entry-company { font-size: 12px; line-height: 1.7; color: var(--muted); margin: 0; }
 .experience-project { font-size: 12px; line-height: 1.7; margin: 16px 0 0; }
+.project-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
 .skill-list { list-style: none; padding: 0; margin: 14px 0 16px; display: flex; flex-wrap: wrap; gap: 6px; }
 .skill-list li { color: var(--muted); background: var(--wash); border: 1px solid var(--line); border-radius: 4px; font-size: 10px; line-height: 1.5; padding: 3px 7px; }
 .highlights { padding-left: 16px; margin: 14px 0 0; color: var(--muted); font-size: 12px; line-height: 1.9; }
@@ -142,6 +143,9 @@ a:hover .arrow { transform: translate(2px, -2px); color: var(--accent); }
 .featured-project { grid-column: 1 / -1; border-top: 2px solid var(--accent); }
 .project-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; margin-bottom: 19px; }
 .project-index { color: var(--accent); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; }
+.project-award { display: inline-block; margin: 4px 0 0; padding: 4px 9px; border-radius: 4px; background: var(--accent-wash); color: var(--accent); font-size: 11px; font-weight: 550; }
+.project-notes { margin-top: 18px; color: var(--faint); font-size: 11px; line-height: 1.7; }
+.project-notes p { margin: 3px 0 0; }
 .portfolio-end { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding-top: 22px; font-size: 12px; }
 
 @media (max-width: 540px) {

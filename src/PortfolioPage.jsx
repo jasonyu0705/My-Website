@@ -60,8 +60,17 @@ export default function PortfolioPage({ themeToggle }) {
           {projects.map((project, index) => <article className={`project-entry${index === 0 ? ' featured-project' : ''}`} key={project.id} aria-labelledby={`${project.id}-heading`}>
             <div className="project-meta"><span className="project-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><p className="entry-date">{project.dates}</p></div>
             <h3 id={`${project.id}-heading`}>{project.title}</h3>
+            {project.award && <p className="project-award">{project.award}</p>}
             <Skills items={project.skills} />
             <Highlights items={project.highlights} />
+            {(project.contributors?.length || project.organization) && <div className="project-notes">
+              {project.contributors?.length > 0 && <p>Contributors: {project.contributors.join(', ')}</p>}
+              {project.organization && <p>Associated with {project.organization}</p>}
+            </div>}
+            {(project.sourceUrl || project.links?.length > 0) && <div className="experience-project project-links">
+              {project.sourceUrl && <a className="company-link" href={project.sourceUrl} target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>}
+              {project.links?.map(link => <a className="company-link" key={link.url} href={link.url} target="_blank" rel="noopener noreferrer">{link.label} <span aria-hidden="true">↗</span></a>)}
+            </div>}
           </article>)}
         </div>
       </section>

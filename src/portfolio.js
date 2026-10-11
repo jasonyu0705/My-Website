@@ -166,6 +166,28 @@ export const projects = [
     ],
   },
   {
+    id: 'hydrobro',
+    title: 'CPES x SONY Hackathon — HydroBro',
+    dates: 'Apr. 2025',
+    sourceUrl: 'https://github.com/jasonyu0705/CPES-X-SONY-HACKATHON-HyrdoBro',
+    links: [
+      {
+        label: 'Sony Spresense article',
+        url: 'https://developer.spresense.sony-semicon.com/posts/learning-by-doing-with-spresense-cpes-hackathon-at-cal-poly',
+      },
+      {
+        label: 'Cal Poly Engineering article',
+        url: 'https://ceng.calpoly.edu/news/computer-engineering-society-hackathon-gives-students-access-to-latest-technology',
+      },
+    ],
+    skills: ['Circuit Design', 'C', 'Sony Spresense', 'Ultrasonic Sensors', 'LCD Displays'],
+    highlights: [
+      'Won first place at Cal Poly’s CPES x SONY hackathon.',
+      'Developed HydroBro, a robot that reminds users to stay hydrated and take breaks while studying, promoting healthy habits during long learning sessions.',
+      'Used Sony’s Spresense main and extension boards, along with peripherals such as an ultrasonic sensor, LCD display, and various other electronic components.',
+    ],
+  },
+  {
     id: 'fsk-system',
     title: 'FSK Receiver-Transmitter System',
     dates: 'Mar. 2025',
