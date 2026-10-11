@@ -52,15 +52,15 @@ export default function App() {
 
   return <>
     <a className="skip-link" href="#main">Skip to content</a>
-    <header className="site-header">
-      <button className="theme-toggle" onClick={toggleTheme} aria-label={`Switch to ${dark ? 'light' : 'dark'} mode`} title={`Switch to ${dark ? 'light' : 'dark'} mode`}>
-        <ThemeIcon dark={dark} />
-      </button>
-    </header>
     <main id="main" className="profile">
       <section className="introduction" aria-labelledby="intro-heading">
         {/* <p className="eyebrow">A LITTLE CORNER OF THE INTERNET</p> */}
-        <h1 id="intro-heading">Hi, I’m {profile.name}<span className="accent">.</span></h1>
+        <div className="intro-header">
+          <h1 id="intro-heading">Hi, I’m {profile.name}<span className="accent">.</span></h1>
+          <button className="theme-toggle" onClick={toggleTheme} aria-label={`Switch to ${dark ? 'light' : 'dark'} mode`} title={`Switch to ${dark ? 'light' : 'dark'} mode`}>
+            <ThemeIcon dark={dark} />
+          </button>
+        </div>
         <p className="bio">{profile.bio}</p>
         <p className="currently"><span className="status-dot" aria-hidden="true" />{profile.current}</p>
         {profile.incoming && <p className="currently upcoming"><span className="status-dot" aria-hidden="true" />{profile.incoming}</p>}
