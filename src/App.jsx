@@ -65,7 +65,7 @@ export default function App() {
       <section className="work-section" aria-labelledby="work-heading">
         <SectionHeading number="01" id="work-heading">Work & a little more</SectionHeading>
         <div className="work-grid">
-          <LinkCard href={profile.portfolioUrl} title={profile.portfolioTitle || 'Portfolio'} description={profile.portfolioDescription || 'Selected work, projects & experiments.'} type="portfolio" />
+          {/* <LinkCard href={profile.portfolioUrl} title={profile.portfolioTitle || 'Portfolio'} description={profile.portfolioDescription || 'Selected work, projects & experiments.'} type="portfolio" /> */}
           <LinkCard href={profile.resumeUrl} title="Resume" description="A little more about my background." type="resume" />
         </div>
       </section>
