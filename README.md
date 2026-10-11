@@ -1,6 +1,6 @@
 # Minimal personal website
 
-A single-page React website inspired by your reference: generous whitespace, muted labels, mint links, and a persistent light/dark switch. Uses esbuild with no Vite, backend, or database.
+A single-page React website with a quiet, notebook-inspired layout: warm colors, thin section dividers, illustrated portfolio and resume links, and a persistent light/dark switch. Uses esbuild with no Vite, backend, or database.
 
 ## Run locally
 
@@ -19,7 +19,7 @@ Edit `src/profile.js` to replace the sample name, bio, current activity, GitHub,
 
 You can place your own resume in `public/resume.pdf` and set `resumeUrl` to `/resume.pdf`. Use your portfolio's URL for `portfolioUrl`. Add a second email with `secondaryEmail`, or leave it empty.
 
-Style the page in `src/styles.css`. The layout switches to stacked rows on mobile. Theme choice is saved in the visitor's browser and defaults to their system preference.
+Style the page in `src/styles.css`. The gallery and social links stack on mobile. The card illustrations are made with CSS and need no image files. The initials mark comes from your name. Theme choice is saved in the visitor's browser and defaults to their system preference.
 
 ## Build and deploy
 

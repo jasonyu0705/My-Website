@@ -14,15 +14,24 @@ function ThemeIcon({ dark }) {
   );
 }
 
-function HighlightLink({ href, children, external = true }) {
-  return <a className="highlight" href={href} {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{children}</a>;
+function Arrow() {
+  return <span className="arrow" aria-hidden="true">↗</span>;
 }
 
-function Row({ label, className = '', children }) {
-  return <section className={`profile-row ${className}`} aria-label={label}>
-    <h2>{label}</h2>
-    <div className="row-content">{children}</div>
-  </section>;
+function SectionHeading({ number, children, id }) {
+  return <div className="section-heading"><span className="section-number" aria-hidden="true">{number}</span><h2 id={id}>{children}</h2></div>;
+}
+
+function LinkCard({ href, title, description, type }) {
+  return <a className={`link-card ${type}`} href={href} target="_blank" rel="noopener noreferrer">
+    <div className="card-art" aria-hidden="true">
+      {type === 'portfolio' ? <div className="mini-browser">
+        <div className="browser-bar"><i /><i /><i /></div>
+        <div className="browser-page"><div className="mini-sidebar"><span /><span /><span /></div><div className="mini-content"><div className="mini-title" /><div className="mini-line" /><div className="mini-tiles"><i /><i /><i /></div></div></div>
+      </div> : <div className="mini-document"><div className="document-heading" /><div className="document-line short" /><div className="document-rule" /><div className="document-line" /><div className="document-line" /><div className="document-line short" /></div>}
+    </div>
+    <div className="card-body"><div className="card-title"><h3>{title}</h3><Arrow /></div><p>{description}</p></div>
+  </a>;
 }
 
 export default function App() {
@@ -40,31 +49,39 @@ export default function App() {
   return <>
     <a className="skip-link" href="#main">Skip to content</a>
     <header className="site-header">
+      <a className="identity" href="#main" aria-label="Back to introduction"><span className="monogram" aria-hidden="true">{profile.name.split(/\s+/).filter(Boolean).map(word => word[0]).slice(0, 2).join('')}</span><span>Personal space</span></a>
       <button className="theme-toggle" onClick={toggleTheme} aria-label={`Switch to ${dark ? 'light' : 'dark'} mode`} title={`Switch to ${dark ? 'light' : 'dark'} mode`}>
         <ThemeIcon dark={dark} />
       </button>
     </header>
     <main id="main" className="profile">
-      <Row label="Intro" className="intro-row">
-        <h1>Hey, I’m {profile.name}.</h1>
-        <p>{profile.bio}</p>
-        <p>{profile.current}{' '}<HighlightLink href={profile.portfolioUrl}>{profile.currentLabel}</HighlightLink></p>
-      </Row>
-      <Row label="Resume"><HighlightLink href={profile.resumeUrl}>Resume <span className="arrow" aria-hidden="true">↗</span></HighlightLink></Row>
-      <Row label="Portfolio"><HighlightLink href={profile.portfolioUrl}>Selected work <span className="arrow" aria-hidden="true">↗</span></HighlightLink></Row>
-      <Row label="GitHub"><HighlightLink href={profile.githubUrl}>{profile.githubLabel} <span className="arrow" aria-hidden="true">↗</span></HighlightLink></Row>
-      <Row label="Contact" className="contact-row">
-        <p><HighlightLink href={profile.linkedinUrl}>LinkedIn <span className="arrow" aria-hidden="true">↗</span></HighlightLink></p>
-        <p><a className="email-link" href={`mailto:${profile.email}`}>{profile.email}</a></p>
-        {profile.secondaryEmail && <p><a className="email-link" href={`mailto:${profile.secondaryEmail}`}>{profile.secondaryEmail}</a></p>}
-      </Row>
+      <section className="introduction" aria-labelledby="intro-heading">
+        <p className="eyebrow">A LITTLE CORNER OF THE INTERNET</p>
+        <h1 id="intro-heading">Hi, I’m {profile.name}<span className="accent">.</span></h1>
+        <p className="bio">{profile.bio}</p>
+        <p className="currently"><span className="status-dot" aria-hidden="true" />{profile.current}</p>
+      </section>
+      <section className="work-section" aria-labelledby="work-heading">
+        <SectionHeading number="01" id="work-heading">Work & a little more</SectionHeading>
+        <div className="work-grid">
+          <LinkCard href={profile.portfolioUrl} title="Portfolio" description="Selected work, projects & experiments." type="portfolio" />
+          <LinkCard href={profile.resumeUrl} title="Resume" description="A little more about my background." type="resume" />
+        </div>
+      </section>
+      <section className="elsewhere-section" aria-labelledby="elsewhere-heading">
+        <SectionHeading number="02" id="elsewhere-heading">Elsewhere</SectionHeading>
+        <div className="social-links">
+          <a href={profile.githubUrl} target="_blank" rel="noopener noreferrer"><span className="link-icon" aria-hidden="true">{'</>'}</span><span className="social-name">GitHub<span className="social-detail">{profile.githubLabel}</span></span><Arrow /></a>
+          <a href={profile.linkedinUrl} target="_blank" rel="noopener noreferrer"><span className="link-icon linkedin-icon" aria-hidden="true">in</span><span className="social-name">LinkedIn<span className="social-detail">Let’s connect</span></span><Arrow /></a>
+        </div>
+      </section>
+      <section className="contact-section" aria-labelledby="contact-heading">
+        <SectionHeading number="03" id="contact-heading">Say hello</SectionHeading>
+        <div className="contact-content"><p>Have something in mind? I’d love to hear it.</p><a className="email-link" href={`mailto:${profile.email}`}>{profile.email}<Arrow /></a>
+          {profile.secondaryEmail && <a className="email-link secondary-email" href={`mailto:${profile.secondaryEmail}`}>{profile.secondaryEmail}<Arrow /></a>}
+        </div>
+      </section>
     </main>
-    <footer className="site-footer" aria-label="End of page">
-      <svg width="34" height="26" viewBox="0 0 34 26" fill="none" aria-hidden="true">
-        <path d="M13 3h18v20H13" stroke="currentColor" strokeWidth="1.7" />
-        <circle cx="13" cy="13" r="10" stroke="currentColor" strokeWidth="1.7" />
-        <path d="M13 3v20" stroke="currentColor" strokeWidth="1.7" />
-      </svg>
-    </footer>
+    <footer className="site-footer"><span>{profile.name}</span><span>A work in progress <span className="footer-spark" aria-hidden="true">✳</span></span></footer>
   </>;
 }
