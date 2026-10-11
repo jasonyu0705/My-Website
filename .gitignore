@@ -5,3 +5,26 @@ dist/
 !.env.example
 .DS_Store
 *.log
+
+# AI tools, instructions, and generated hosting metadata
+.openai/
+.sites-runtime/
+.codex/
+.agents/
+.claude/
+.cursor/
+.windsurf/
+.continue/
+.roo/
+.aider*
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+.cursorrules
+.cursorignore
+.windsurfrules
+.clinerules
+.roorules
+.github/copilot-instructions.md
+.github/instructions/
+.github/prompts/
