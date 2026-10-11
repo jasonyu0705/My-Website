@@ -14,5 +14,5 @@ export const profile = {
   linkedinUrl: 'https://www.linkedin.com/in/JasonYu101',
   email: 'jjjyyy101@outlook.com',
   phone: '925-768-0036',
-  secondaryEmail: '',
+  secondaryEmail: 'jyu160@calpoly.edu',
 };

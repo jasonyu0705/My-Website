@@ -85,8 +85,8 @@ export default function App() {
       <section className="contact-section" aria-labelledby="contact-heading">
         <SectionHeading number="03" id="contact-heading">Say hello</SectionHeading>
         <div className="contact-content"><p>Want to get in touch?</p><div className="contact-links"><a className="email-link" href={`mailto:${profile.email}`}>{profile.email}<Arrow /></a>
-          {profile.phone && <a className="phone-link" href={`tel:${profile.phone.replace(/[^\d+]/g, '')}`}>{profile.phone}</a>}
           {profile.secondaryEmail && <a className="email-link secondary-email" href={`mailto:${profile.secondaryEmail}`}>{profile.secondaryEmail}<Arrow /></a>}
+          {profile.phone && <a className="phone-link" href={`tel:${profile.phone.replace(/[^\d+]/g, '')}`}>{profile.phone}</a>}
         </div></div>
       </section>
     </main>
