@@ -1,0 +1,161 @@
+// Portfolio content. Rebuild after making changes.
+export const workExperience = [
+  {
+    id: 'molex-incoming-coop',
+    role: 'Incoming Engineering Co-op',
+    company: 'Molex',
+    companyUrl: 'https://www.molex.com/',
+    location: 'Fremont, CA',
+    dates: 'Soon to come',
+    skills: [],
+    highlights: [],
+  },
+  {
+    id: 'marathon-process-controls',
+    role: 'Process Controls & Automation Engineering Intern',
+    company: 'Marathon Petroleum Corporation',
+    companyUrl: 'https://www.marathonpetroleum.com/',
+    location: 'San Antonio, TX',
+    dates: 'Sept. 2026 – Present',
+    current: true,
+    skills: ['PLC', 'Ladder Logic', 'SCADA', 'HMI', 'I/O Testing', 'Shell Scripting'],
+    highlights: [
+      'Designing and testing PLC/SCADA control systems using ladder logic programming, HMI screens, and I/O testing to support industrial automation and plant equipment upgrades',
+      'Writing shell scripts to poll data from DA50 protocol converter and automate PLC file searching & classification',
+      'Working with NG and NGL services',
+    ],
+  },
+  {
+    id: 'cal-poly-cybersecurity',
+    role: 'AWS Application Developer (Part-Time)',
+    company: 'Cal Poly Cybersecurity Institute',
+    location: 'San Luis Obispo, CA',
+    dates: 'Apr. 2026 – Present',
+    current: true,
+    skills: ['AWS', 'React'],
+    highlights: [
+      'Architected AWS backend and React frontend for the Cal Poly CalSEA projects',
+    ],
+  },
+  {
+    id: 'molex-embedded-software',
+    role: 'Embedded Software Engineer Intern',
+    company: 'Molex',
+    companyUrl: 'https://www.molex.com/',
+    location: 'Fremont, CA',
+    dates: 'Jun. 2026 – Sept. 2026',
+    skills: ['SPI', 'Embedded C', 'GitLab', 'Test Case Development', 'Python', 'Verilog', 'Cadence Allegro'],
+    highlights: [
+      'Architected fault-insertion firmware for an optical gain block, allowing alarm coverage validation across 5 faults',
+      'Redesigned the snapshot data format to support a new optical gain block hardware revision; validated the snapshot getter over SPI and UART with 50+ test cases',
+      'Built and integrated an embedded test bed used by 10+ engineers to validate optical EDFA hardware',
+      'Replaced a legacy logarithmic amplifier IC in a log amp & TIA circuit with an updated part, allowing for the addition of dark current compensation',
+    ],
+  },
+  {
+    id: 'marathon-software',
+    role: 'Software Engineer Intern',
+    company: 'Marathon Petroleum Corporation',
+    companyUrl: 'https://www.marathonpetroleum.com/',
+    location: 'San Antonio, TX',
+    dates: 'Sept. 2025 – Dec. 2025',
+    skills: ['C#', '.NET', 'Azure Functions', 'Blazor', 'Git', 'Azure File Share', 'ML.NET'],
+    highlights: [
+      'Developed an Azure Function for Marine Logistics using Azure File Share, C#, and the .NET framework to automate financial data transfers, streamlining file exchange and saving teams hundreds of hours annually.',
+      'Wrote algorithms to compare similarity of data entries and utilized mock data to train an ML.NET model to recognize similarity between two data entries, increasing the consistency of the data by 20%.',
+      'Re-architected legacy software from IaaS to PaaS by merging a console app and API into a single Azure Function.',
+    ],
+  },
+  {
+    id: 'hunter-software',
+    role: 'Software Engineer Intern',
+    company: 'Hunter Industries',
+    companyUrl: 'https://www.hunter.global/',
+    location: 'San Marcos, CA',
+    dates: 'Jun. 2025 – Aug. 2025',
+    skills: ['AngularJS', 'React', 'AWS Lambda', 'Amazon RDS', 'MySQL', 'JavaScript', 'TypeScript', 'CSS', 'Jest', 'Git'],
+    highlights: [
+      'Built a data-export feature for Centralus, an online irrigation control platform, allowing technicians to have one place to view data and increasing efficiency of controller setting adjustments by 30%',
+      'Constructed a user-friendly card UI using AngularJS, allowing the user to select what controller data they want to export and in what format (PDF or CSV).',
+      'Utilized AWS Lambda and Amazon RDS for serverless data querying, allowing for efficient data access.',
+      'Applied Agile methodologies and Test-Driven Development in a team of four to ensure robust code',
+    ],
+  },
+  {
+    id: 'cal-poly-teaching',
+    role: 'Instructional Student Assistant',
+    company: 'Cal Poly Computer Science & Software Engineering Department',
+    location: 'San Luis Obispo, CA',
+    dates: 'Sept. 2024 – Apr. 2025',
+    skills: ['Java', 'Python', 'Teaching'],
+    highlights: [
+      'Supported 25 students in mastering OOP fundamentals and advanced concepts through weekly office hours, while grading labs and problem sets with consistent feedback to improve code quality and student performance.',
+    ],
+  },
+  {
+    id: 'cal-poly-research',
+    role: 'Undergraduate Researcher',
+    company: 'Cal Poly College of Engineering',
+    location: 'San Luis Obispo, CA',
+    dates: 'Jul. 2024 – Aug. 2024',
+    skills: [],
+    highlights: [
+      "Labeled and curated training data for OpenAI's GPT-3.5-turbo-0125 model, refining prompt engineering strategies to enhance the generation of ATS-optimized resumes that align with job descriptions and improve resume ATS scores.",
+      "Collaborated with researchers to test Python scripts, analyzing ATS evaluations of resumes to refine LLM-generated content and ensure ATS compatibility while accurately reflecting candidates' experiences.",
+    ],
+  },
+];
+
+export const projects = [
+  {
+    id: 'ai-factory',
+    title: 'Capstone Project: Cal Poly Noyce AI Factory',
+    dates: 'Jan. 2026 – Present',
+    skills: ['LLM Training', 'Slurm', 'HPC', 'KVM/QEMU'],
+    highlights: [
+      "Researched HPC scheduling, GPU resource allocation, and distributed AI infrastructure to support Cal Poly's AI Factory deployment using NVIDIA DGX B200 systems",
+      'Built and validated a virtual 4-node Ubuntu cluster on an NVIDIA DGX Spark host using KVM/QEMU, Linux bridge networking, static IP configuration, and Slurm workload scheduling',
+    ],
+  },
+  {
+    id: 'magnetic-stripe-emulator',
+    title: 'Magnetic Stripe Emulator',
+    dates: 'Jun. 2025',
+    skills: ['Microcontrollers', 'I2C', 'EEPROM', 'C', 'H-Bridge', 'Solenoid', 'UART'],
+    highlights: [
+      'Developed an STM32-based device that emulates magnetic card swipes using a solenoid and motor driver, with robust C code for a seamless user experience',
+      'Researched and designed a circuit that replicates magnetic stripe specifications, successfully transmitting data to standard card readers through induced magnetic fields',
+    ],
+  },
+  {
+    id: 'battery-charger',
+    title: 'Nine Volt Battery Charger',
+    dates: 'Jun. 2025',
+    skills: ['Microcontrollers', 'Circuit Design', 'UART', 'ADC'],
+    highlights: [
+      'Built a 9V charger using a step-down transformer, a full-wave bridge rectifier, and a BJT-based current regulator to achieve constant-current/constant-voltage (CC/CV) tapering',
+      'Integrated an STM32 that monitors battery voltage through a voltage divider and low-pass filter, using the ADC to estimate state of charge in real time and report it over UART',
+    ],
+  },
+  {
+    id: 'fsk-system',
+    title: 'FSK Receiver-Transmitter System',
+    dates: 'Mar. 2025',
+    skills: ['Circuit Theory', 'Circuit Design', 'Analog Electronics'],
+    highlights: [
+      'Engineered a 555 timer-based IR transmitter using FSK modulation (3.6 kHz / 7.2 kHz), triggered by a reed switch',
+      'Built a photodiode-based receiver with a transimpedance amplifier and an analog tachometer circuit (comparator, one-shot, and low-pass filter) that decodes frequencies into distinct DC voltage levels',
+    ],
+  },
+  {
+    id: 'risc-v-snake',
+    title: 'Snake in RISC-V Assembly',
+    dates: 'Dec. 2024',
+    skills: ['Verilog', 'FPGA Programming', 'VGA', 'Assembly'],
+    highlights: [
+      'Constructed an OTTER processor in SystemVerilog containing an ALU, FSM, and other modules',
+      'Added a VGA module to the processor and wrote RISC-V assembly to create a rendition of Snake, with buttons on a Basys 3 board as I/O controls',
+      'Programmed a main loop and multiple subroutines for clean gameplay, using the stack to manage subroutine registers and an ISR to handle button inputs',
+    ],
+  },
+];

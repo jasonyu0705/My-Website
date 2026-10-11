@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { profile } from './profile.js';
+import PortfolioPage from './PortfolioPage.jsx';
 
 function ThemeIcon({ dark }) {
   return dark ? (
@@ -39,7 +40,8 @@ function SectionHeading({ number, children, id }) {
 }
 
 function LinkCard({ href, title, description, type }) {
-  return <a className={`link-card ${type}`} href={href} target="_blank" rel="noopener noreferrer">
+  const external = !href.startsWith('/') || type === 'resume';
+  return <a className={`link-card ${type}`} href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>
     <div className="card-art" aria-hidden="true">
       {type === 'portfolio' ? <div className="mini-browser">
         <div className="browser-bar"><i /><i /><i /></div>
@@ -60,6 +62,14 @@ export default function App() {
     try { localStorage.setItem('personal-site-theme', next ? 'dark' : 'light'); } catch { /* Storage may be disabled. */ }
   }
 
+  const themeToggle = <button className="theme-toggle" onClick={toggleTheme} aria-label={`Switch to ${dark ? 'light' : 'dark'} mode`} title={`Switch to ${dark ? 'light' : 'dark'} mode`}>
+    <ThemeIcon dark={dark} />
+  </button>;
+
+  if (/^\/portfolio(?:\/|$)/.test(window.location.pathname)) {
+    return <PortfolioPage themeToggle={themeToggle} />;
+  }
+
   return <>
     <a className="skip-link" href="#main">Skip to content</a>
     <main id="main" className="profile">
@@ -67,19 +77,17 @@ export default function App() {
         {/* <p className="eyebrow">A LITTLE CORNER OF THE INTERNET</p> */}
         <div className="intro-header">
           <h1 id="intro-heading">Hi, I’m {profile.name}<span className="accent">.</span></h1>
-          <button className="theme-toggle" onClick={toggleTheme} aria-label={`Switch to ${dark ? 'light' : 'dark'} mode`} title={`Switch to ${dark ? 'light' : 'dark'} mode`}>
-            <ThemeIcon dark={dark} />
-          </button>
+          {themeToggle}
         </div>
         <p className="bio">{profile.bio}</p>
         <p className="currently"><span className="status-dot" aria-hidden="true" /><span><CompanyText text={profile.current} company={profile.currentCompany} url={profile.currentCompanyUrl} /></span></p>
         {profile.incoming && <p className="currently upcoming"><span className="status-dot" aria-hidden="true" /><span><CompanyText text={profile.incoming} company={profile.incomingCompany} url={profile.incomingCompanyUrl} /></span></p>}
       </section>
       <section className="work-section" aria-labelledby="work-heading">
-        <SectionHeading number="01" id="work-heading">Look at my resume</SectionHeading>
+        <SectionHeading number="01" id="work-heading">Resume & portfolio</SectionHeading>
         <div className="work-grid">
-          {/* <LinkCard href={profile.portfolioUrl} title={profile.portfolioTitle || 'Portfolio'} description={profile.portfolioDescription || 'Selected work, projects & experiments.'} type="portfolio" /> */}
           <LinkCard href={profile.resumeUrl} title="Resume" description="A little more about my background." type="resume" />
+          <LinkCard href={profile.portfolioUrl} title={profile.portfolioTitle || 'Portfolio'} description={profile.portfolioDescription || 'Selected work, projects & experiments.'} type="portfolio" />
         </div>
       </section>
       <section className="elsewhere-section" aria-labelledby="elsewhere-heading">
