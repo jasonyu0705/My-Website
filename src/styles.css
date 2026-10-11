@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500&display=swap');
+
+:root {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #424843;
+  background: #fafbf9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --muted: #8b908b;
+  --highlight: #deeee7;
+  --highlight-hover: #c9e5d9;
+  --focus: #4b7965;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  color: #d8ddd8;
+  background: #191d1b;
+  --muted: #8d988f;
+  --highlight: #2c4439;
+  --highlight-hover: #3a584a;
+  --focus: #a6cfb8;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100svh; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; text-decoration: none; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--focus); outline-offset: 5px; }
+::selection { background: var(--highlight-hover); }
+.site-header { max-width: 1120px; margin: 0 auto; padding: 38px 44px 0; display: flex; justify-content: flex-end; }
+.theme-toggle { border: 0; background: none; color: inherit; display: grid; place-items: center; width: 44px; height: 44px; padding: 9px; border-radius: 50%; cursor: pointer; transition: background 160ms ease, transform 160ms ease; }
+.theme-toggle:hover { background: var(--highlight); transform: rotate(-12deg); }
+.theme-toggle svg { width: 26px; height: 26px; }
+.profile { max-width: 940px; padding: 0 36px; margin: 65px auto 0; font-size: 19px; line-height: 1.65; letter-spacing: -.3px; }
+.profile-row { display: grid; grid-template-columns: 140px minmax(0, 1fr); column-gap: 48px; margin-bottom: 43px; }
+.profile-row h2 { font-size: inherit; font-weight: 400; color: var(--muted); margin: 0; padding-top: 2px; }
+.row-content h1 { font-size: inherit; font-weight: 450; margin: 0 0 23px; }
+.row-content p { margin: 0 0 21px; }
+.row-content p:last-child { margin-bottom: 0; }
+.intro-row { margin-bottom: 51px; }
+.intro-row h2 { padding-top: 56px; }
+.highlight { display: inline; padding: 3px 6px 4px; margin-left: -6px; border-radius: 4px; background: var(--highlight); box-decoration-break: clone; -webkit-box-decoration-break: clone; transition: background 160ms ease; }
+.highlight:hover { background: var(--highlight-hover); }
+.intro-row p .highlight { margin-left: 1px; white-space: nowrap; }
+.arrow { font-size: .77em; margin-left: 4px; color: var(--muted); display: inline-block; transition: transform 160ms ease; }
+.highlight:hover .arrow { transform: translate(2px, -2px); }
+.contact-row { margin-bottom: 0; }
+.contact-row h2 { padding-top: 52px; }
+.email-link { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 5px; overflow-wrap: anywhere; transition: text-decoration-color 160ms ease; }
+.email-link:hover { text-decoration-color: var(--muted); }
+.site-footer { display: flex; justify-content: center; color: #5c6c60; padding: 65px 0 37px; }
+[data-theme='dark'] .site-footer { color: #9bab9f; }
+.skip-link { position: fixed; left: 16px; top: -80px; padding: 8px 14px; background: var(--highlight); border-radius: 4px; z-index: 10; }
+.skip-link:focus { top: 16px; }
+
+@media (min-width: 1500px) {
+  .site-header { max-width: 1260px; padding-top: 48px; }
+  .profile { margin-top: 85px; max-width: 1060px; font-size: 21px; }
+  .profile-row { grid-template-columns: 150px minmax(0, 1fr); column-gap: 70px; margin-bottom: 49px; }
+  .intro-row { margin-bottom: 59px; }
+  .site-footer { padding-top: 78px; }
+}
+
+@media (max-width: 640px) {
+  .site-header { padding: 22px 21px 0; }
+  .profile { margin-top: 41px; padding: 0 29px; font-size: 17px; line-height: 1.7; letter-spacing: -.2px; }
+  .profile-row { grid-template-columns: 1fr; gap: 12px; margin-bottom: 34px; }
+  .profile-row h2 { font-size: 13px; letter-spacing: .1px; padding: 0; }
+  .row-content h1 { font-size: 22px; margin-bottom: 20px; }
+  .row-content p { margin-bottom: 18px; }
+  .intro-row { margin-bottom: 36px; }
+  .contact-row { margin-bottom: 0; }
+  .site-footer { padding: 48px 0 30px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}
