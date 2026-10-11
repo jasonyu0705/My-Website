@@ -19,7 +19,7 @@ Edit `src/profile.js` to update Jason's name, bio, current activity, GitHub, Lin
 
 The original resume is included as `public/resume.pdf` and opens from the Resume card. Replace that file to update it. Add a second email with `secondaryEmail`, or leave it empty. Clear `phone` to hide the phone link.
 
-Style the page in `src/styles.css`. The gallery and social links stack on mobile. The card illustrations are made with CSS and need no image files. The initials mark comes from your name. Theme choice is saved in the visitor's browser and defaults to their system preference.
+Style the page in `src/styles.css`. The gallery and social links stack on mobile. The card illustrations are made with CSS and need no image files. The initials mark comes from your name. Dark mode is the default; the visitor's theme choice is saved in their browser.
 
 ## Build and deploy
 
