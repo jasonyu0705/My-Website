@@ -84,6 +84,5 @@ export default function App() {
         </div></div>
       </section>
     </main>
-    <footer className="site-footer"><span>{profile.name}</span></footer>
   </>;
 }
