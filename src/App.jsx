@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { profile } from './profile.js';
 
 function ThemeIcon({ dark }) {
@@ -42,8 +42,6 @@ function LinkCard({ href, title, description, type }) {
 
 export default function App() {
   const [dark, setDark] = useState(() => document.documentElement.dataset.theme === 'dark');
-
-  useEffect(() => { document.title = `${profile.name} — Personal website`; }, [profile.name]);
 
   function toggleTheme() {
     const next = !dark;
