@@ -55,7 +55,6 @@ export default function App() {
   return <>
     <a className="skip-link" href="#main">Skip to content</a>
     <header className="site-header">
-      <a className="identity" href="#main" aria-label="Back to introduction"><span className="monogram" aria-hidden="true">{profile.name.split(/\s+/).filter(Boolean).map(word => word[0]).slice(0, 2).join('')}</span><span>Personal space</span></a>
       <button className="theme-toggle" onClick={toggleTheme} aria-label={`Switch to ${dark ? 'light' : 'dark'} mode`} title={`Switch to ${dark ? 'light' : 'dark'} mode`}>
         <ThemeIcon dark={dark} />
       </button>
