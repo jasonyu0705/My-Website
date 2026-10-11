@@ -60,6 +60,7 @@ export default function App() {
         <h1 id="intro-heading">Hi, I’m {profile.name}<span className="accent">.</span></h1>
         <p className="bio">{profile.bio}</p>
         <p className="currently"><span className="status-dot" aria-hidden="true" />{profile.current}</p>
+        {profile.incoming && <p className="currently upcoming"><span className="status-dot" aria-hidden="true" />{profile.incoming}</p>}
       </section>
       <section className="work-section" aria-labelledby="work-heading">
         <SectionHeading number="01" id="work-heading">Work & a little more</SectionHeading>
@@ -77,7 +78,7 @@ export default function App() {
       </section>
       <section className="contact-section" aria-labelledby="contact-heading">
         <SectionHeading number="03" id="contact-heading">Say hello</SectionHeading>
-        <div className="contact-content"><p>Have something in mind? I’d love to hear it.</p><div className="contact-links"><a className="email-link" href={`mailto:${profile.email}`}>{profile.email}<Arrow /></a>
+        <div className="contact-content"><p>Want to get in touch?</p><div className="contact-links"><a className="email-link" href={`mailto:${profile.email}`}>{profile.email}<Arrow /></a>
           {profile.phone && <a className="phone-link" href={`tel:${profile.phone.replace(/[^\d+]/g, '')}`}>{profile.phone}</a>}
           {profile.secondaryEmail && <a className="email-link secondary-email" href={`mailto:${profile.secondaryEmail}`}>{profile.secondaryEmail}<Arrow /></a>}
         </div></div>

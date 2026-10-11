@@ -1,8 +1,9 @@
-// Public details from Jason's resume. Rebuild after making changes.
+// Public profile details. Rebuild after making changes.
 export const profile = {
   name: 'Jason Yu',
   bio: 'I’m a Computer Engineering student at Cal Poly San Luis Obispo, working across embedded systems, firmware, and software.',
   current: 'Currently a Process Control & Automation Engineer Intern at Marathon Petroleum.',
+  incoming: 'Incoming Co-op at Molex',
   // No separate portfolio URL was listed in the resume; use GitHub until one is added.
   portfolioUrl: 'https://github.com/jasonyu0705',
   portfolioTitle: 'Projects',
