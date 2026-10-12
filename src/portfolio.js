@@ -1,16 +1,6 @@
 // Portfolio content. Rebuild after making changes.
 export const workExperience = [
   {
-    id: 'molex-incoming-coop',
-    role: 'Incoming Engineering Co-op',
-    company: 'Molex',
-    companyUrl: 'https://www.molex.com/',
-    location: 'Fremont, CA',
-    dates: 'Soon to come',
-    skills: [],
-    highlights: [],
-  },
-  {
     id: 'marathon-process-controls',
     role: 'Process Controls & Automation Engineering Intern',
     company: 'Marathon Petroleum Corporation',
