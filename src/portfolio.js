@@ -13,7 +13,7 @@ export const workExperience = [
       'Designing and testing PLC/SCADA control systems using ladder logic programming in Studio5000, HMI screens in Crimson 3.1 & 3.2, and I/O testing to support industrial automation and plant equipment upgrades',
       'Developing a GraphicAccess API tool to generate and modify AVEVA System Platform SCADA screens via XML',
       'Writing shell scripts to poll data from DA50 protocol converter and automate PLC file searching & classification',
-      'Assisted communication testing on industrial PLC panel and systems during factory acceptance testing (FAT)'
+      'Performed Factory Acceptance Testing (FAT), including point-to-point I/O checkout between field instrumentation and PLC to verify wiring, tag mapping, and signal integrity'
     ],
   },
   {
