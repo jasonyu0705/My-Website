@@ -10,8 +10,9 @@ export const workExperience = [
     current: true,
     skills: ['PLC', 'Ladder Logic', 'SCADA', 'HMI', 'I/O Testing', 'Shell Scripting'],
     highlights: [
-      'Designing and testing PLC/SCADA control systems using ladder logic programming, HMI screens, and I/O testing to support industrial automation and plant equipment upgrades',
-      'Writing shell scripts to poll data from DA50 protocol converter and automate PLC file searching & classification'
+      'Designing and testing PLC/SCADA control systems using ladder logic programming in Studio5000, HMI screens in Crimson 3.1 & 3.2, and I/O testing to support industrial automation and plant equipment upgrades',
+      'Developing a GraphicAccess API tool to generate and modify AVEVA System Platform SCADA screens via XML',
+      'Writing shell scripts to poll data from DA50 protocol converter and automate PLC file searching & classification',
     ],
   },
   {
