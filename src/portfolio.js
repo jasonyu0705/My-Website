@@ -8,7 +8,7 @@ export const workExperience = [
     location: 'San Antonio, TX',
     dates: 'Sept. 2026 – Present',
     current: true,
-    skills: ['PLC', 'Ladder Logic', 'SCADA', 'HMI', 'I/O Testing', 'Shell Scripting'],
+    skills: ['PLC', 'Ladder Logic', 'SCADA', 'HMI', 'P&ID', 'I/O Testing', 'Shell Scripting'],
     highlights: [
       'Designing and testing PLC/SCADA control systems using ladder logic programming in Studio5000, HMI screens in Crimson 3.1 & 3.2, and I/O testing to support industrial automation and plant equipment upgrades',
       'Developing a GraphicAccess API tool to generate and modify AVEVA System Platform SCADA screens via XML',
